@@ -1,0 +1,30 @@
+<html>
+<head>
+<body>
+<div id="cuadrado1"  class="cuadrado1">
+</div>
+</body>
+<style>
+.cuadrado1{
+  font-size: 50px;
+  background-color: red;
+  height:300px;
+  width:25%;
+  text-align: center;
+  box-shadow: 10px 20px;
+  visibility: visible;
+  position: absolute;
+  left:100px;
+  top:100px;
+}
+</style>
+<script>
+cuadrado1 = document.getElementById("cuadrado1");
+cuadrado1.addEventListener("click",ocultar_o_visibilizar)
+function ocultar_o_visibilizar() {
+  if (  cuadrado1.style.backgroundColor == "white") {
+    cuadrado1.style.backgroundColor = "red";
+  } else {
+    cuadrado1.style.backgroundColor = "white";
+}
+</script>
