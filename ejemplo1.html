@@ -1,17 +1,17 @@
 <html>
 <head>
+</head>
 <body>
-<div id="cuadrado1"  class="cuadrado1">
-</div>
-</body>
+  <div id="cuadrado1"  class="cuadrado1"></div>
+
 <style>
 .cuadrado1{
   font-size: 50px;
-  background-color:red;
+  background-color: red;
   height:300px;
   width:25%;
   text-align: center;
-  box-shadow: 10px 20px;
+  /*box-shadow: 10px 20px;*/
   visibility: visible;
   position: absolute;
   left:100px;
@@ -19,12 +19,39 @@
 }
 </style>
 <script>
-cuadrado1 = document.getElementById("cuadrado1");
-cuadrado1.addEventListener("click",ocultar_o_visibilizar)
 function ocultar_o_visibilizar() {
-  if (  cuadrado1.style.backgroundColor == "white") {
+  if (cuadrado1.style.backgroundColor == "white") {
     cuadrado1.style.backgroundColor = "red";
   } else {
     cuadrado1.style.backgroundColor = "white";
+  }
 }
+cuadrado1 = document.getElementById("cuadrado1");
+cuadrado1.addEventListener("click",ocultar_o_visibilizar);
+document.addEventListener("keydown", Keyboard)
+document.getElementById("cuadrado1");
+x = 100;
+dx = 10;
+y = 100;
+dy = 10;
+function Keyboard (key) {
+  if (key.keyCode == 39) {
+                console.log("right");
+                x = x + dx; 
+            } else if (key.keyCode == 37) {
+                console.log("left")
+                x = x - dx; 
+            } else if (key.keyCode == 38) {
+                console.log("top")
+                y = y - dy; 
+            } else if (key.keyCode == 40) {
+                console.log("down")
+                y = y + dy; 
+            }
+            cuadrado1.style.left = x + "px";
+            cuadrado1.style.top = y + "px";
+}
+
 </script>
+</body>
+</html>
