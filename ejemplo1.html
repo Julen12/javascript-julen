@@ -2,20 +2,29 @@
 <head>
 </head>
 <body>
+  <div id="campo" class="campo"> </div>
   <div id="cuadrado1"  class="cuadrado1"></div>
 
 <style>
 .cuadrado1{
   font-size: 50px;
   background-color: red;
-  height:300px;
-  width:25%;
+  height:30px;
+  width:5%;
   text-align: center;
   /*box-shadow: 10px 20px;*/
   visibility: visible;
   position: absolute;
   left:100px;
   top:100px;
+}
+.campo {
+background-color:green;
+width:50%;
+height:900px;
+position:absolute;
+top:25px;
+left:100px;
 }
 </style>
 <script>
@@ -35,6 +44,14 @@ dx = 100;
 y = 100;
 dy = 100;
 function Keyboard (key) {
+if ((x(=25) || (x+100>=900)||(y>900)||(y+100>=900)) {
+}else{
+}
+
+
+
+
+
   if (key.keyCode == 39) {
                 console.log("right");
                 x = x + dx; 
